@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  oracle:
+    image: gvenzl/oracle-xe            # imagen con Oracle XE 
+    container_name: oracle-xe
+    ports:
+      - "1522:1521"                    # mapeo host:contenedor
+    environment:
+      ORACLE_PASSWORD: root            # contraseña de SYSTEM
+    volumes:
+      - oracle_data:/u01/app/oracle/oradata  # persistencia de datos
+
+volumes:
+  oracle_data:
