@@ -1,7 +1,7 @@
 import flet as ft
-from dao.ingrediente_dao import IngredienteDAO
-from models.ingrediente import Ingrediente
-from components.dialogo_confirmacion_component import DialogoConfirmacion
+from src.dao.ingrediente_dao import IngredienteDAO
+from src.models.ingrediente import Ingrediente
+from src.components.dialogo_confirmacion_component import DialogoConfirmacion
 
 def IngredientesView(page: ft.Page):
     input_nombre = ft.TextField(label="Nombre del ingrediente", expand=True)

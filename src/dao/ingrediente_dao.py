@@ -1,5 +1,5 @@
-from database.conexion import Conexion
-from models.ingrediente import Ingrediente
+from src.database.conexion import Conexion
+from src.models.ingrediente import Ingrediente
 from typing import Optional
 
 class IngredienteDAO:   
@@ -62,7 +62,7 @@ class IngredienteDAO:
         try:
             cursor = conn.cursor()
             sql = "UPDATE INGREDIENTE SET NOMBRE = :1, UNIDAD_MEDIDA = :2 WHERE ID_INGREDIENTE = :3"
-            valores = (ingrediente.nombre, ingrediente.unidad_medida, ingrediente.id_ingrediente)
+            valores = (ingrediente.nombre, ingrediente.unidad_medida, ingrediente.id_ingrediente,)
             cursor.execute(sql, valores)
             conn.commit()
         except Exception as e:

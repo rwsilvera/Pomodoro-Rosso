@@ -1,9 +1,9 @@
 import flet as ft
 
-from views.ingrediente_view import IngredientesView
-from views.listado_ordenes_view import ListadoOrdenesView
-from views.orden_view import OrdenView
-from views.producto_view import ProductosView
+from src.views.ingrediente_view import IngredientesView
+from src.views.listado_ordenes_view import ListadoOrdenesView
+from src.views.orden_view import OrdenView
+from src.views.producto_view import ProductosView
 
 def inicio(page: ft.Page):
     page.title = "Pomodoro Rosso"
